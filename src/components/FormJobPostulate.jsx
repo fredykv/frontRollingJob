@@ -10,7 +10,7 @@ const FormJobPostulate = (props) => {
   const onsubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("/api/v1/offers", UserSelec);
+      await axios.post("https://rollingjobback.herokuapp.com/api/v1/offers", UserSelec);
       setUserSelec({});
             await Swal.fire({
   icon: 'success',

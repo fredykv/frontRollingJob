@@ -41,7 +41,7 @@ const PerfilUser = () => {
   const getuser = useCallback(async () => {
     try {
       const response = await axios.get(
-        "/api/v1/offers/candidate/all"
+        "https://rollingjobback.herokuapp.com/api/v1/offers/candidate/all"
       );
       setdatauser(response.data);
     } catch (error) {
@@ -52,7 +52,7 @@ const PerfilUser = () => {
   const getpostulation = async () => {
     try {
       const response = await axios.get(
-        "/api/v1/offer/postulates/user/all"
+        "https://rollingjobback.herokuapp.com/api/v1/offer/postulates/user/all"
       );
       setdatapostulation(response.data);
     } catch (error) {
@@ -75,7 +75,7 @@ const PerfilUser = () => {
       if (result.value) {
         try {
           await axios.put(
-            "/api/v1/users/candidates/",
+            "https://rollingjobback.herokuapp.com/api/v1/users/candidates/",
             UserSelec
           );
           Swal.fire({
@@ -112,7 +112,7 @@ const PerfilUser = () => {
   // TRAE LOS DATOS DEL USUARIO PARA SER EDITADOS
   const getArticles = useCallback(async () => {
     const response = await axios.get(
-      "/api/v1/users/candidates/edit/"
+      "https://rollingjobback.herokuapp.com/api/v1/users/candidates/edit/"
     );
     setUserSelec(response.data);
   }, []);
@@ -125,7 +125,7 @@ const PerfilUser = () => {
   const signOutHandler = async (e) => {
     e.preventDefault();
     try {
-      await axios.get("/api/v1/users/candidates/logout");
+      await axios.get("https://rollingjobback.herokuapp.com/api/v1/users/candidates/logout");
       auth.logout();
       await Swal.fire({
         icon: "success",
@@ -154,7 +154,7 @@ const PerfilUser = () => {
         const formData = new FormData();
         formData.append("image", f);
         await axios.post(
-          "/api/v1/users/candidates/upImagen",
+          "https://rollingjobback.herokuapp.com/api/v1/users/candidates/upImagen",
           formData,
           {
             headers: {
@@ -195,7 +195,7 @@ const PerfilUser = () => {
         const formData = new FormData();
         formData.append("CV", f);
         await axios.post(
-          "/api/v1/users/candidates/upCv",
+          "https://rollingjobback.herokuapp.com/api/v1/users/candidates/upCv",
           formData,
           {
             headers: {

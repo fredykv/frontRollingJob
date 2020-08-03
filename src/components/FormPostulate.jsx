@@ -22,7 +22,7 @@ const FormPostulate = (props) => {
       }).then(async (result) => {
         if (result.value) {
           await axios.delete(
-            `/api/v1/offer/postulates/${props.postu._id}`
+            `https://rollingjobback.herokuapp.com/api/v1/offer/postulates/${props.postu._id}`
           );
           Swal.fire({
             icon: "success",
@@ -43,7 +43,7 @@ const FormPostulate = (props) => {
       e.preventDefault();
       try {
         await axios.put(
-          `/api/v1/offer/postulates/${props.postu._id}`,
+          `https://rollingjobback.herokuapp.com/api/v1/offer/postulates/${props.postu._id}`,
           UserSelec
         );
         setUserSelec({});
@@ -75,7 +75,7 @@ const FormPostulate = (props) => {
       e.preventDefault();
       try {
         await axios.post(
-          `/api/v1/offer/postulates/${props.all._id}`,
+          `https://rollingjobback.herokuapp.com/api/v1/offer/postulates/${props.all._id}`,
           UserSelec
         );
         setUserSelec({});

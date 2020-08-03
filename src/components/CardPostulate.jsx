@@ -24,7 +24,7 @@ const CardPostulate = (props) => {
   const getArticles = useCallback(async () => {
     try {
       const response = await axios.get(
-        `/api/v1/offers/${props.all.offerid}`
+        `https://rollingjobback.herokuapp.com/api/v1/offers/${props.all.offerid}`
       );
       setdata(response.data);
     } catch (error) {

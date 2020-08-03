@@ -19,7 +19,7 @@ const Register = () => {
     if (UserSelec.password === UserSelec.password2) {
       try {
         await axios.post(
-          "/api/v1/users/candidates",
+          "https://rollingjobback.herokuapp.com/api/v1/users/candidates",
           UserSelec
         );
         await Swal.fire({

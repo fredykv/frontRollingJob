@@ -9,7 +9,7 @@ const AdminEditPostulation = (props) => {
   const getArticles = useCallback(async () => {
     try {
       const response = await axios.get(
-        `/api/v1/offers/${props.idpost}/admin`
+        `https://rollingjobback.herokuapp.com/api/v1/offers/${props.idpost}/admin`
       );
       setdata(response.data);
     } catch (error) {}
@@ -18,7 +18,7 @@ const AdminEditPostulation = (props) => {
   const getAr = useCallback(async () => {
     try {
       const res = await axios.get(
-        `/api/v1/offers/${props.idpost}/postulations`
+        `https://rollingjobback.herokuapp.com/api/v1/offers/${props.idpost}/postulations`
       );
       setcat(res.data);
     } catch (error) {}

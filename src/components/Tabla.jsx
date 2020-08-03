@@ -13,7 +13,7 @@ const Table = (props) => {
     try {
       setflag(false);
       await axios.put(
-        `/api/v1/offer/postulates/${props.c._id}/admin`,
+        `https://rollingjobback.herokuapp.com/api/v1/offer/postulates/${props.c._id}/admin`,
         { state: estado }
       );
       await Swal.fire({

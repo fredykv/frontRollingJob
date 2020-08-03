@@ -19,7 +19,7 @@ const CardOfferts = (props) => {
         .then(async (result) => {
           if (result.value) {
             await axios.delete(
-              `/api/v1/offers/${props.data._id}`
+              `https://rollingjobback.herokuapp.com/api/v1/offers/${props.data._id}`
             );
             sweetalert.fire({
               icon: "success",

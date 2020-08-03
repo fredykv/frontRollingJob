@@ -10,7 +10,7 @@ const OfertasInicio= (props) => {
   const getArticles = useCallback(async () => {
     try {
       const response = await axios.get(
-        "/api/v1/offers/all"
+        "https://rollingjobback.herokuapp.com/api/v1/offers/all"
       );
       setdata(response.data);      
     } catch (error) {

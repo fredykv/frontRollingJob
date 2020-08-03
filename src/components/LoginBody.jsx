@@ -14,7 +14,7 @@ const LoginBody = (props) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "/api/v1/users/administrators/login",
+        "https://rollingjobback.herokuapp.com/api/v1/users/administrators/login",
         {
           username: username.trim(),
           password: password.trim(),
@@ -36,7 +36,7 @@ const LoginBody = (props) => {
 if (flag===true) {
   try {
     const response = await axios.post(
-      "/api/v1/users/candidates/login",
+      "https://rollingjobback.herokuapp.com/api/v1/users/candidates/login",
       {
         username: username.trim(),
         password: password.trim(),

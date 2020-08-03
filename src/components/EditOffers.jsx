@@ -10,7 +10,7 @@ const EditOffers = (props) => {
     e.preventDefault();
     try {
       await axios.put(
-        `/api/v1/offers/${props.oferta._id}`,
+        `https://rollingjobback.herokuapp.com/api/v1/offers/${props.oferta._id}`,
         UserSelec
       );
       setUserSelec({});

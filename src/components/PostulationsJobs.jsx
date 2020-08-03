@@ -10,7 +10,7 @@ const PostulationsJobs = () =>{
 const [data, setdata] = useState([]);
     
   const getArticles = useCallback(async () => {
-    const response = await axios.get("/api/v1/offers/admin/all");   
+    const response = await axios.get("https://rollingjobback.herokuapp.com/api/v1/offers/admin/all");   
     setdata(response.data)
 }, []);
 
