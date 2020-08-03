@@ -52,7 +52,7 @@ const Home = () => {
       if (role === "admin") {
         history.push("/company");
       }
-      // actualizar();
+      actualizar();
     }
   }, [auth.isAuthenticated() ]);
 
@@ -63,15 +63,15 @@ const Home = () => {
       <Body />
       {auth.isAuthenticated() ? (
         <div className="d-flex flex-wrap">
-          {/* <OfertaInicioUser get={actualizar} datauser={datauser} />
+          <OfertaInicioUser get={actualizar} datauser={datauser} />
           <PostulationInicio
             get={actualizar}
             datapostulation={datapostulation}
-          /> */}
+          />
         </div>
       ) : (
         <div>
-          {/* <OfertaInicio /> */}
+          <OfertaInicio />
         </div>
       )}
       <BodyDown />
